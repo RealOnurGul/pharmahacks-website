@@ -1,0 +1,56 @@
+@font-face {
+    font-family: 'Posterama';
+    src: url("/fonts/Posterama 2001 W04 SemiBold.ttf") format("opentype");
+}
+.story-container{
+    border-radius: 10px;
+    height: 350px;
+    width: 250px;
+    position: relative;
+    overflow: hidden;
+    margin-right: 30px;
+    display: inline-block;
+    text-align: center;
+    font-family: 'Posterama';
+}
+.story-container>img{
+    position: absolute;
+    top:0px;
+    height: 100%;
+    left:0px;
+    transition: all 200ms ease;
+}
+.story-container>div{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: rgba(0,0,0,0.5);
+    transition: all ease 140ms;
+}
+.story-container>div:hover{
+    opacity: 1;
+}
+.story-container>div:hover span{
+    margin-top: 0px;
+}
+.story-container:hover img{
+    height: 102%;
+    top:-5px;
+    left:-2px;
+}
+.story-container>div>span{
+    color:white;
+    font-size: .75em;
+    margin-top: 20px;
+    transition: all ease 140ms;
+    white-space:pre-wrap;
+}
+.story-words{
+    max-width: 220px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

@@ -1,0 +1,130 @@
+.ha-sponsors-container {
+    min-height: 75vh;
+    background-color: #fafafa;
+    position: relative;
+    padding-bottom: 3vh;
+  }
+  .ha-sponsors-text {
+    background-color: #000d1b;
+    color: white;
+    text-align: left;
+    margin-top: -2px;
+    padding: 100px 10% 78px;
+  }
+  .ha-sponsors-title {
+    font-family: "Nunito", sans-serif;
+    display: block;
+    font-size: 2.5em;
+    margin-bottom: 5px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  
+  .ha-sponsors-details {
+    font-size: 1.3em;
+    font-weight: 200;
+    opacity: 0.8;
+  }
+  .ha-sponsors-details > a {
+    color: #64B5F6;
+    font-weight: 400;
+  }
+  .ha-individual-sponsor {
+    padding: 0px 10%;
+    padding-top: 5vh;
+    padding-bottom: 3%;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .year-titles {
+    font-family: 'Montserrat', sans-serif;
+    padding-top: 10px;
+    text-align: left;
+    color: #64B5F6;
+    font-size: 2em;
+    letter-spacing: 1px;
+    display: block;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  .ha-individual-sponsor>a{
+      color: inherit; 
+      text-decoration: inherit;
+  }
+  .ha-previous-sponsors>a{
+      color: inherit; 
+      text-decoration: inherit;
+  }
+  .ha-sponsors-details>span{
+      color:#64B5F6;
+      font-weight: 400;
+  }
+  .ha-sponsors-background{
+      background-image: url("/images/sponsors/background.svg");
+      
+      background-repeat: no-repeat;
+     
+  }
+  @media only screen and (min-width:1450px){
+      .ha-sponsors-background{
+          background-size: cover;
+      }
+      
+  }
+  @media only screen and (max-width: 600px) {
+    .ha-filler-background {
+      background-color: #000d1b;
+      height: 20vh;
+      margin-top: -15px;
+    }
+    .ha-sponsors-text {
+      min-height: 25vh;
+      padding: 38px 10% 38px;
+    }
+    .ha-sponsors-title {
+      margin-top: -12vh;
+      font-size: 1.8em;
+      padding-bottom: 15vh;
+    }
+    .ha-sponsors-details {
+      margin-top: -12vh;
+      font-size: 1.1em;
+      letter-spacing: 0.5px;
+      padding-bottom: 10%;
+    }
+    .ha-individual-sponsor {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow-x: visible;
+      max-width: 100%;
+      height: auto;
+    }
+    .ha-individual-sponsor > a {
+      margin: 10px;
+      width: 160px;
+      height: 120px;
+    }
+   .ha-previous-sponsors {
+      display:flex;
+      flex-direction: row;
+   }
+  }
+  @media only screen and (min-height: 900px) {
+      .ha-sponsors-container {
+          min-height: 0vh;
+      }
+  }
+  .ha-individual-sponsor > a {
+    display: inline-block;
+    margin: 15px;
+    width: 300px;
+    height: 230px;
+  }
+  
+  

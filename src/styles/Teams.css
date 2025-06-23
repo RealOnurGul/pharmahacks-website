@@ -1,0 +1,97 @@
+/* @import url(//db.onlinewebfonts.com/c/03d33d67fd07fb2d31001eb9f90d58bf?family=Posterama); */
+@font-face {
+    font-family: 'Posterama';
+    src: url("/fonts/Posterama 2001 W04 SemiBold.ttf") format("opentype");
+}
+.teams-container{
+    background-color: transparent;
+    max-width: 100vw;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 100px 15%;
+    position: relative;
+    z-index: 1;
+}
+.t-background-container{
+    position: absolute;
+    top:0px;
+    left:0px;
+    width: 100vw;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 0;
+}
+.t-background-container>svg{
+    position: absolute;
+    opacity: 0.3;
+}
+.t-background-container>svg:nth-child(1){
+    height: 100vh;
+    left: 5vw;
+}
+.t-background-container>svg:nth-child(2){
+    height: 60vh;
+    right: 5vw;
+    top:5vh;
+}
+/* .t-title-section{
+    color:white;
+    width: 30vw;
+    text-align: left;
+    position: relative;
+    z-index: 100;
+}
+.t-title-text-svg{
+    max-width: 70vw;
+    margin-bottom: 25px;
+} */
+.t-title{
+    text-align: left;
+    text-transform: uppercase;
+    font-family: 'Posterama', sans-serif;
+    display: inline-block;
+    align-items: center;
+    justify-content: center;
+    line-height: 74px;
+    color: white;
+    font-size: 2.5em;
+    font-weight: bold;
+    letter-spacing: 4px;
+    position: relative;
+    z-index: 10;
+    animation: fadeIn 1.2s ease-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.t-title>span:nth-child(3){
+    color: #64B5F5;
+    font-size: 4em;
+}
+
+@media only screen and (max-width: 600px) {
+    .teams-container{
+        justify-content: center;
+        padding: 0px;
+    }
+    .t-background-container>svg:nth-child(1){
+        top:-10%;
+    }
+    .t-dna-gif{
+        display: none;
+    }
+    .t-title-section{
+        margin-left: 0px;
+        width: 100vw;
+        text-align: center;
+    }
+    .t-title {
+        font-size: 7vw;
+        line-height: normal;
+    }
+}

@@ -1,0 +1,70 @@
+@font-face {
+  font-family: 'Posterama';
+  src: url("/fonts/Posterama 2001 W04 SemiBold.ttf") format("opentype");
+}
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+.tickerCell {
+  font-size: 3vw; /* Reduce font size */
+  flex: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 5px;
+  max-width: 200px;
+  /* line-height: 50px; */
+  /* background-color: aliceblue; */
+  padding: 0px 0px 1vh 0px;
+  font-family: 'Posterama';
+  background: #1e1e1e; /* Dark background for each cell */
+  color: #000000; /* Light text for contrast */
+  padding: 5px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  animation: pulse 2s infinite ease-in-out;
+  width: auto;
+
+}
+
+
+.tickerCell > .tickerCellValue {
+  font-size: 4rem;
+  font-family: 'Montserrat', 'sans-serif';
+}
+.tickerCell > .tickerCellLabel {
+  font-style: italic;
+}
+
+.red{
+  background-color: #EF2F3C;
+}
+
+.blue{
+  background-color: #276FBF;
+}
+
+.white{
+  background-color: #F6F4F3;
+}
+
+.yellow{
+  background-color: #F0A202;
+}
+
+@media only screen and (max-width: 850px) {
+  .tickerCell {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .tickerCell > .tickerCellValue {
+    font-size: 3rem;
+  }
+  .tickerCell > .tickerCellLabel {
+    font-style: italic;
+  }
+}

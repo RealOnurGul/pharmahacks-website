@@ -1,0 +1,46 @@
+.new-sponsor{
+    font-size: 2em;
+    font-family: 'Nunito', sans-serif;
+    padding: 0px 5%;
+    display: inline-flex;
+    align-items: center;
+    text-align: left;
+    box-sizing: border-box;
+    color: #2D00AE;
+    cursor: pointer;
+}
+.new-sponsor:hover{
+    color:white;
+    box-shadow: none !important;
+}
+.new-sponsor>div{
+    position: absolute;
+}
+.become-sponsor,.arrow-right{
+    z-index: 100;
+    position: relative;
+}
+.transition-background{
+    position: absolute;
+    top:0px;
+    left:0px;
+    bottom:0px;
+    width: 60%;
+    background-color: #2D00AE;
+    transition: all 100ms ease-in-out;
+    z-index: 0;
+    border-radius: 12px;
+    opacity: 0;
+}
+.new-sponsor:hover .transition-background{
+    opacity: 1;
+    width: 100%;
+}
+.new-sponsor:hover .arrow-right{
+    stroke: white;
+}
+@media only screen and (max-width: 600px) {
+    .new-sponsor{
+        padding: 0px 10%;
+    }
+}

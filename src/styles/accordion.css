@@ -1,0 +1,118 @@
+.accordion-title {
+  font-family: Nunito;
+  font-weight: 600;
+  font-size: 25px;
+  line-height: 34.1px;
+  color: #000d1b;
+}
+
+.accordion-container-long {
+  background-color: white;
+  cursor: pointer;
+  padding: 35px 72px 35px 42px;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+  list-style: none;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.accordion-container-short {
+  background-color: rgba(196, 196, 196, 0.15);
+  cursor: pointer;
+  text-align: left;
+  border-radius: 10px;
+  margin-top: 10px;
+  border: none;
+  padding: 35px 30px 35px 42px;
+}
+
+.accordion-container-short:before {
+  content: "\002B"; /* Unicode character for "plus" sign (+) */
+  font-size: 34px;
+  color: #c1d1e0;
+  float: right;
+  margin-left: 5px;
+  line-height: 34.1px;
+  border: none;
+}
+
+.accordion-container-short:hover {
+  background-color: #ccc;
+}
+
+.accordion-text {
+  font-family: Nunito;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 27px;
+  text-align: left;
+  margin-top: 13px;
+  color: #000d1b;
+  background-color: white;
+  transition: all 220ms ease-in;
+}
+
+.accordion-text-hidden {
+  visibility: hidden;
+  height: 0px;
+}
+
+@media only screen and (max-width: 600px) {
+  .accordion-title {
+    font-family: Nunito;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 34.1px;
+    color: #000d1b;
+  }
+
+  .accordion-container-long {
+    background-color: white;
+    cursor: pointer;
+    padding: 25px 65px 25px 38px;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    list-style: none;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .accordion-container-short {
+    background-color: rgba(196, 196, 196, 0.15);
+    cursor: pointer;
+    text-align: left;
+    border-radius: 10px;
+    margin-top: 10px;
+    border: none;
+    padding: 25px 24px 25px 38px;
+  }
+
+  .accordion-container-short:before {
+    content: "\002B"; /* Unicode character for "plus" sign (+) */
+    font-size: 34px;
+    color: #c1d1e0;
+    float: right;
+    margin-left: 5px;
+    line-height: 34.1px;
+    border: none;
+  }
+
+  .accordion-container-short:hover {
+    background-color: #ccc;
+  }
+
+  .accordion-text {
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    text-align: left;
+    margin-top: 13px;
+    color: #000d1b;
+    background-color: white;
+    transition: all 220ms ease-in;
+  }
+}

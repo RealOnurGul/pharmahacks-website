@@ -1,0 +1,99 @@
+@font-face {
+    font-family: 'Posterama';
+    src: url("/fonts/Posterama 2001 W04 SemiBold.ttf") format("opentype");
+}
+
+/* Wrapper div to create the border ring */
+.border-ring {
+    margin-right:10px;
+    margin-left: 10px;
+    border-radius: 50%; /* Make the border ring circular */
+    padding: 0px; /* Controls the thickness of the border */
+    margin-bottom: 25px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition: padding 400ms ease;
+    position: relative;
+    z-index: 5; /* Ensure it appears above the background */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+/* When the image (inside member-container) is hovered, change the border-ring padding */
+.member-container:hover ~ .border-ring,
+.border-ring:hover {
+    padding: 5px; /* Smoothly transition to 5px padding*/
+ }
+
+/* Specific styles for VP and non-VP borders */
+.vp-border {
+    border: 5px solid #64B5F5; /* Light blue border for VPs */
+    box-shadow: 0 0 15px rgba(100, 181, 245, 0.3); /* Add glow effect */
+}
+
+.non-vp-border {
+    border: 5px solid white; /* White border for non-VPs */
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.2); /* Add glow effect */
+}
+
+/* General styling for member container */
+.member-container {
+    border-radius: 50%; /* Make the container circular */
+    height: 277.5px;
+    width: 277.5px;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    text-align: center;
+    transition: all 200ms ease; /* Smooth transition for hover */
+    background-color: rgba(0, 0, 0, 0.2); /* Add slight background color */
+    backdrop-filter: blur(2px); /* Add subtle blur effect */
+}
+
+.member-container > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensures the image covers the circular area without distortion */
+    transition: all 200ms ease;
+}
+
+/* Circular overlay */
+.member-container > div {
+    width: 100%;
+    height: 100%;
+    position: absolute; /* Ensures it covers the entire container */
+    top: 0;
+    left: 0;
+    display: flex; /* Centers content */
+    justify-content: center;
+    align-items: center;
+    opacity: 0; /* Hidden by default */
+    background-color: rgba(0, 14, 27, 0.7); /* Slightly more opaque for better readability */
+    border-radius: 50%; /* Make the overlay circular to match the container */
+    transition: opacity 200ms ease; /* Smooth fade-in */
+    font-family: 'Posterama';
+    color: white;
+    backdrop-filter: blur(3px); /* Add blur effect on hover */
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5); /* Inner shadow for depth */
+}
+
+/* Apply hover effect on the entire container */
+.member-container:hover > div {
+    opacity: 1; /* Show overlay on hover */
+}
+
+/* Additional styles for text */
+.m-position {
+    color: #64B5F5;
+    font-size: 0.8em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}
+
+.m-field {
+    color: #64B5F5;
+    font-size: 0.8em;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5); /* Add text shadow for better readability */
+}

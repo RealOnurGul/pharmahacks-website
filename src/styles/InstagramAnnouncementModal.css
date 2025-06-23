@@ -1,0 +1,83 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.8); /* Darker background */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Stronger shadow */
+    border: 5px solid #041960; /* Bright border for emphasis */
+    animation: scaleUp 0.3s ease-in-out; /* Pop effect on open */
+  }
+
+  @keyframes scaleUp {
+    from {
+      transform: scale(0.8);
+      opacity: 0;
+    }
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .modal-content img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 3px solid #5b04b7; /* Border for image */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    font-size: 35px;
+    color: white;
+    background: #1f036e; /* Bright red close button */
+    border-radius: 50%;
+    padding: 0 12px;
+    cursor: pointer;
+    border: 3px solid white; /* White border for contrast */
+  }
+  
+  .close-button:hover {
+    background: #ff0000;
+  }
+  
+
+  /* When modal is visible, disable interactions with the background */
+body.modal-open {
+    overflow: hidden;
+    pointer-events: none;
+  }
+  /* Allow pointer events for the modal even when the background is disabled */
+  .modal, .modal * {
+    pointer-events: auto;
+  }
+  
+
+  .modal-content p {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold; /* Make the text bold */
+    margin-top: 15px; /* Spacing */
+    background: #f9f9f9; /* Slight background */
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+  }

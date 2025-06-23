@@ -1,0 +1,77 @@
+@font-face {
+  font-family: 'Posterama';
+  src: url("/fonts/Posterama 2001 W04 SemiBold.ttf") format("opentype");
+}
+
+.pageContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 90vw; /* Increased max-width for better visibility */
+  padding: 20px; /* Uniform padding for consistency */
+  color: white;
+  font-family: 'Posterama';
+  margin: auto; /* Center the container on the page */
+  align-items: center; /* Center align the contents */
+  text-align: center; 
+}
+
+.pageContainer .title {
+  color: white;
+  font-size: 2.5rem; /* Adjusted font size for better readability */
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px; /* Increase the bottom margin */
+
+}
+
+.text {
+  color: white;
+  margin-bottom: 1.8rem;
+}
+
+.pageContainer .toggleButton {
+  padding: 1.5rem;
+  font-size: 1rem;
+  margin-top: 2.5rem;
+  border: 1px solid #11357e;
+  background: white;
+  border-radius: 3rem;
+  text-transform: uppercase;
+  color: #11357e;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.pageContainer .toggleButton:hover {
+  border: 1px solid #1e4aa1;
+  background: #ddd;
+  color: #1e4aa1;
+}
+
+.pageContainer .toggleButton:active {
+  border: 1px solid white;
+  background: #11357e;
+  color: white;
+}
+
+/* Media queries for smaller screens */
+@media only screen and (max-width: 850px) {
+  .pageContainer .title {
+    font-size: 1.8rem; /* Adjust the font size for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .pageContainer .title {
+    font-size: 1.5rem; /* Even smaller font size for very small screens */
+    margin-bottom: 5px; /* Less space between titles on small screens */
+  }
+  .pageContainer .toggleButton {
+    padding: 1rem;
+    font-size: 0.9rem;
+    margin-top: 1.5rem;
+  }
+}
