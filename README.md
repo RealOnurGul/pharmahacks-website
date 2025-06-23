@@ -92,3 +92,102 @@ To be able to merge your PR with master, your code currently needs to satisfy tw
 These may sound very restricting right now if you&#39;re not used to it, but it&#39;ll help us ship better and more maintainable code. Trust me!
 
 Once you merge your code to **master** branch, the website is automatically compiled and deployed onto our hosting (ie. **it goes live!** - this can typically take about a minute).
+
+# PharmaHacks Website - Cloudflare Version
+
+This is a clean version of the PharmaHacks website optimized for deployment on Cloudflare Pages.
+
+## ✨ Features
+
+- **Beautiful Galaxy Theme**: Stunning animated background on the Team page
+- **Responsive Design**: Works perfectly on all devices
+- **Fast Performance**: Optimized for Cloudflare's edge network
+- **No Firebase Dependencies**: Cleaned up for static hosting
+
+## 🚀 Quick Start
+
+### Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run start-legacy  # Use this if you have Node.js 17+
+# OR
+npm run start        # Use this for older Node.js versions
+
+# Build for production
+npm run build-legacy  # Use this if you have Node.js 17+
+# OR
+npm run build        # Use this for older Node.js versions
+```
+
+### Deploy to Cloudflare Pages
+
+1. **Push to GitHub**: Make sure your code is in a GitHub repository
+2. **Connect to Cloudflare Pages**:
+   - Go to [Cloudflare Pages](https://pages.cloudflare.com/)
+   - Click "Create a project"
+   - Connect your GitHub repository
+3. **Build Settings**:
+   - **Build command**: `npm run build`
+   - **Build output directory**: `build`
+   - **Root directory**: `/` (leave empty)
+4. **Deploy**: Cloudflare will automatically build and deploy your site!
+
+## 📁 Project Structure
+
+```
+src/
+├── components/     # Reusable React components
+├── containers/     # Page sections and layouts
+├── pages/         # Main page components
+└── styles/        # CSS stylesheets
+
+public/
+├── images/        # Static images and assets
+└── index.html     # Main HTML template
+```
+
+## 🎨 Key Pages
+
+- **Home**: Welcome page with hero section
+- **Team**: Beautiful galaxy-themed team member showcase
+- **Events**: Information about PharmaHacks events
+- **Sponsors**: Sponsor showcase and information
+
+## 🔧 Technical Details
+
+- **React**: 16.13.0
+- **React Router**: 6.x for navigation
+- **Build Tool**: Create React App 3.4.0
+- **Deployment**: Optimized for Cloudflare Pages
+
+## 🌟 Special Features
+
+### Galaxy Team Page
+The team page features a stunning animated galaxy background with:
+- Twinkling stars
+- Floating particles
+- Animated nebula effects
+- Smooth scrolling
+- Mobile responsive design
+
+## 📝 Notes
+
+- This version has been cleaned of Firebase dependencies
+- Large video files are excluded from git (see .gitignore)
+- Uses legacy OpenSSL provider for compatibility with newer Node.js versions
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+---
+
+Made with ❤️ by the PharmaHacks team
